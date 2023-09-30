@@ -1,10 +1,14 @@
+import Burger from "../shared/burger";
+
 interface INavbarProps {
   className?: string;
 }
 
-const Navbar = ({className}: INavbarProps) => {
+const Navbar = ({className = ''}: INavbarProps) => {
   return (
-    <div className={className + ' Navbar'.trimStart()}></div>
+    <nav className={(className + ' Navbar').trimStart()}>
+      <Burger />
+    </nav>
   )
 }
 
