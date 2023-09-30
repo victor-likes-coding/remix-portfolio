@@ -1,4 +1,7 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
+import rootStyles from './styles/root.css'
+import layoutStyles from './styles/layout.css'
+import designStyles from './styles/design.css'
 import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
@@ -8,8 +11,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Navbar from "./components/layout/Navbar";
 
 export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: rootStyles },
+    { rel: "stylesheet", href: layoutStyles },
+    { rel: "stylesheet", href: designStyles },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
@@ -23,7 +30,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Navbar />
+        <div className="container">
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
