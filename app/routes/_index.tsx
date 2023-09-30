@@ -1,25 +1,18 @@
-import type { MetaFunction, LinksFunction } from "@remix-run/node";
-import Navbar from "~/components/layout/Navbar";
-import styles from '../styles/root.css'
+import type { MetaFunction } from "@remix-run/node";
+
+
+import Main from "~/components/layout/Main";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Victor Tran | Portfolio" },
+    { name: "description", content: "Victor's personal project portfolio, inspired by JJK" },
   ];
 };
 
-export const links: LinksFunction = () => {
-  return [
-    { rel: "stylesheet", href: styles },
-  ];
-};
 
 export default function Index() {
   return (
-    <div>
-      {/* on top */}
-      <Navbar />
-    </div>
+      <Main />
   );
 }
