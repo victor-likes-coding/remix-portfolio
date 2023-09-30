@@ -1,9 +1,38 @@
+:root {
+  --mobile-normal: 375px;
+  --mobile-large: 414px;
+  --tablet-normal: 768px;
+  --tablet-large: 800px;
+  --desktop-normal: 1024px;
+  --desktop-large: 1200px;
+  --widescreen-normal: 1440px;
+  --widescreen-large: 1600px;
+  --fullhd-normal: 1920px;
+  --fullhd-large: 2560px;
+  --white: #ffffff;
+  --black: #00171f;
+  --primary: #003459;
+  --secondary: #007ea7;
+  --tertiary: #00a8e8;
+  --nav-height: 8vh;
+}
+
+/* Designs are mobile first being <= 375px */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--white);
 }
 
 hmtl {
   font-size: 62.5%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary);
+  overflow-x: hidden;
 }
