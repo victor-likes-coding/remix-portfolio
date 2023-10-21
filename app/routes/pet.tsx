@@ -1,17 +1,6 @@
-import type { LinksFunction } from '@remix-run/node';
 import Introduction from '~/components/layout/Introduction';
 import lucy from '../assets/lucy.jpeg';
 import Image from '~/components/shared/image';
-import petStyles from '../styles/pet.css';
-
-export const links: LinksFunction = () => {
-  return [
-    {
-      rel: 'stylesheet',
-      href: petStyles,
-    },
-  ];
-};
 
 export default function Pet() {
   return (
@@ -23,9 +12,9 @@ export default function Pet() {
           <p className="mb-2">My "why" on becoming an SWE</p>
         </header>
       </Introduction>
-      <section className="pet-life">
-        <section className="early-life">
-          <h3 className="font-bold">Early Life</h3>
+      <section className="pet-life flex flex-col gap-2 pb-3">
+        <section className="early-life gap-4 flex flex-col">
+          <h3 className="font-bold text-center">Early Life</h3>
           <p>
             Lucy was born on or around May 13<sup>th</sup> of 2019. I adopted
             her from the Concow mountains back in August 13<sup>th</sup>, 2019
@@ -41,8 +30,8 @@ export default function Pet() {
           </p>
         </section>
 
-        <section className="mid-life mt-2">
-          <h3 className="font-bold">Mid Life</h3>
+        <section className="mid-life flex flex-col gap-4">
+          <h3 className="font-bold text-center">Mid Life</h3>
           <p>
             Lucy has been with me for {new Date().getFullYear() - 2019} years.
             This year, 2023, I've been home nearly the whole year, and she's
