@@ -1,5 +1,4 @@
 import { cssBundleHref } from '@remix-run/css-bundle';
-
 import tailwindStyles from './styles/tailwind.css';
 import type { LinksFunction } from '@remix-run/node';
 import {
@@ -11,7 +10,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import Navbar from './components/layout/Navbar';
-
+import { NextUIProvider } from '@nextui-org/react';
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindStyles },
 
@@ -28,13 +27,15 @@ export default function App() {
         <Links />
       </head>
       <body className="text-[#fff]">
-        <Navbar />
-        <div className="container px-3 bg-blue-300 w-screen h-auto min-h-screen overflow-y-hidden">
-          <Outlet />
-        </div>
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        <NextUIProvider>
+          <Navbar />
+          <div className="container px-3 bg-blue-300 w-screen h-auto min-h-screen overflow-y-hidden">
+            <Outlet />
+          </div>
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </NextUIProvider>
       </body>
     </html>
   );
