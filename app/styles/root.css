@@ -19,20 +19,20 @@
 
 /* Designs are mobile first being <= 375px */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--white);
-}
-
-hmtl {
+} */
+/* 
+html {
   font-size: 62.5%;
-}
-
+} */
+/* 
 .container {
   width: 100vw;
   height: 100vh;
   background-color: var(--primary);
   overflow-x: hidden;
-}
+} */

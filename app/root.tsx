@@ -1,8 +1,7 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import rootStyles from './styles/root.css'
-import layoutStyles from './styles/layout.css'
-import designStyles from './styles/design.css'
-import type { LinksFunction } from "@remix-run/node";
+import { cssBundleHref } from '@remix-run/css-bundle';
+
+import tailwindStyles from './styles/tailwind.css';
+import type { LinksFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -10,14 +9,13 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import Navbar from "./components/layout/Navbar";
+} from '@remix-run/react';
+import Navbar from './components/layout/Navbar';
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: rootStyles },
-    { rel: "stylesheet", href: layoutStyles },
-    { rel: "stylesheet", href: designStyles },
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: 'stylesheet', href: tailwindStyles },
+
+  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ];
 
 export default function App() {
@@ -29,9 +27,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="text-[#fff]">
         <Navbar />
-        <div className="container">
+        <div className="container px-3 bg-blue-300 w-screen h-auto min-h-screen overflow-y-hidden">
           <Outlet />
         </div>
         <ScrollRestoration />

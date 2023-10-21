@@ -1,25 +1,31 @@
-import type { LinksFunction } from '@remix-run/node'
-import Introduction from '~/components/layout/Introduction'
-import lucy from '../assets/lucy.jpeg'
-import Image from '~/components/shared/image'
+import type { LinksFunction } from '@remix-run/node';
+import Introduction from '~/components/layout/Introduction';
+import lucy from '../assets/lucy.jpeg';
+import Image from '~/components/shared/image';
+import petStyles from '../styles/pet.css';
 
 export const links: LinksFunction = () => {
-  return []
-}
+  return [
+    {
+      rel: 'stylesheet',
+      href: petStyles,
+    },
+  ];
+};
 
 export default function Pet() {
   return (
     <section className="Pet">
       <Image src={lucy} alt="Lucy my dog" />
-      <Introduction introText="My adorable sweet little puppy">
-        <header>
-          <h2>Lucy</h2>
+      <Introduction>
+        <header className="font-bold text-center border-b">
+          <h2 className="text-xl">Lucy</h2>
+          <p className="mb-2">My "why" on becoming an SWE</p>
         </header>
       </Introduction>
       <section className="pet-life">
         <section className="early-life">
-          <h3>Early Life</h3>
-
+          <h3 className="font-bold">Early Life</h3>
           <p>
             Lucy was born on or around May 13<sup>th</sup> of 2019. I adopted
             her from the Concow mountains back in August 13<sup>th</sup>, 2019
@@ -35,8 +41,8 @@ export default function Pet() {
           </p>
         </section>
 
-        <section className="mid-life">
-          <h3>Mid Life</h3>
+        <section className="mid-life mt-2">
+          <h3 className="font-bold">Mid Life</h3>
           <p>
             Lucy has been with me for {new Date().getFullYear() - 2019} years.
             This year, 2023, I've been home nearly the whole year, and she's
@@ -45,8 +51,14 @@ export default function Pet() {
             go and get a remote job in the software engineering industry so that
             I can be home with her.
           </p>
+
+          <p>
+            As of 2023 I'm working towards getting a SWE job that will allow me
+            to eventually purchase a big home with a backyard for her and adopt
+            a brother/sister for her.
+          </p>
         </section>
       </section>
     </section>
-  )
+  );
 }

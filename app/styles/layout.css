@@ -1,4 +1,4 @@
-.Navbar {
+/* .Navbar {
   border-bottom: 1px solid var(--tertiary);
   height: var(--nav-height);
   width: 100%;
@@ -7,18 +7,12 @@
   align-items: center;
   padding-left: calc(var(--nav-height) * 0.2);
   position: fixed;
-}
-
+} */
+/* 
 .Main,
 .Pet {
   position: relative;
   top: var(--nav-height);
   width: 95%;
   margin-inline: auto;
-}
-
-.Links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
+} */

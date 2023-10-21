@@ -1,7 +1,7 @@
 interface IntroductionProps {
-  className?: string
-  children?: React.ReactNode
-  introText?: string
+  className?: string;
+  children?: React.ReactNode;
+  introText?: string;
 }
 
 const Introduction = ({
@@ -10,11 +10,11 @@ const Introduction = ({
   introText,
 }: IntroductionProps) => {
   return (
-    <section className={(className + ' Introduction').trimStart()}>
+    <section className={(className + 'divide-y my-2 text-center').trimStart()}>
       {children}
-      {introText && <div className="intro-text">{introText}</div>}
+      {introText && <div className="font-bold pt-2">{introText}</div>}
     </section>
-  )
-}
+  );
+};
 
-export default Introduction
+export default Introduction;
