@@ -28,7 +28,10 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
     { text: 'Sign In', navigateTo: '/auth' },
   ];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-black">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-black"
+      isBordered={true}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -50,13 +53,5 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
     </Navbar>
   );
 };
-
-/* <nav
-  className={(
-    className +
-    ' z-10 px-3 divide-y h-auto w-full bg-black sticky top-0 left-0 right-0 Navbar'
-  ).trimStart()}>
-  <Burger />
-</nav> */
 
 export default CustomNavbar;
