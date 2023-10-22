@@ -8,13 +8,25 @@ import {
   NavbarMenuItem,
 } from '@nextui-org/react';
 import Burger from '../shared/burger';
+import { useLocation } from '@remix-run/react';
 
 interface INavbarProps {
   className?: string;
 }
 
+type pathOptions = '/' | '/portfolio' | '/contact' | '/about' | '/pet';
+
 const CustomNavbar = ({ className = '' }: INavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const linksMap = {
+    '/': 'Home',
+    '/portfolio': 'Portfolio & Experience',
+    '/contact': 'Contact & Socials',
+    '/about': 'Lore & About',
+    '/pet': 'Pet',
+  };
 
   const links = [
     { text: 'Home', navigateTo: '/' },
@@ -37,6 +49,9 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           icon={<Burger />}
         />
+        <p className="text-[#fff] font-bold text-center w-screen absolute right-0 -z-10 text-xl">
+          {linksMap[location.pathname as pathOptions]}
+        </p>
       </NavbarContent>
       <NavbarMenu className="p-0 gap-0 divide-y bg-black">
         {links.map(({ text, navigateTo }, index) => (
