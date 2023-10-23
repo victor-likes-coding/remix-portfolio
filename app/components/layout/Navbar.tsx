@@ -37,7 +37,7 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
     { text: 'Contact & Socials', navigateTo: '/contact' },
     { text: 'Lore & About', navigateTo: '/about' },
     { text: 'Pet', navigateTo: '/pet' },
-    { text: 'Sign In', navigateTo: '/auth' },
+    // { text: 'Sign In', navigateTo: '/auth' },
   ];
   return (
     <Navbar
