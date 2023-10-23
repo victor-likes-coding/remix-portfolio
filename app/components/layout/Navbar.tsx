@@ -45,10 +45,13 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
       className="bg-black"
       isBordered={true}>
       <NavbarContent>
+        {/* Only show toggle menu if we're not on root page of '/' */}
+        {location.pathname !== '/' && (
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           icon={<Burger />}
         />
+        )}
         <p className="text-[#fff] font-bold text-center w-screen absolute right-0 -z-10 text-xl">
           {linksMap[location.pathname as pathOptions]}
         </p>
