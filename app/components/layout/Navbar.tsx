@@ -47,26 +47,30 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
       <NavbarContent>
         {/* Only show toggle menu if we're not on root page of '/' */}
         {location.pathname !== '/' && (
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          icon={<Burger />}
-        />
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            icon={<Burger />}
+          />
         )}
         <p className="text-[#fff] font-bold text-center w-screen absolute right-0 -z-10 text-xl">
           {linksMap[location.pathname as pathOptions]}
         </p>
       </NavbarContent>
       <NavbarMenu className="p-0 gap-0 divide-y bg-black">
-        {links.map(({ text, navigateTo }, index) => (
-          <NavbarMenuItem key={navigateTo}>
-            <Link
-              className="w-full bg-blue-500 p-4 text-[#fff]"
-              href={navigateTo}
-              size="lg">
-              {text}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        {links.map(({ text, navigateTo }, index) => {
+          // Don't show the current page in the navbar
+          if (location.pathname === navigateTo) return '';
+          return (
+            <NavbarMenuItem key={navigateTo}>
+              <Link
+                className="w-full bg-blue-500 p-4 text-[#fff]"
+                href={navigateTo}
+                size="lg">
+                {text}
+              </Link>
+            </NavbarMenuItem>
+          );
+        })}
       </NavbarMenu>
     </Navbar>
   );
