@@ -1,17 +1,8 @@
-import { LinkIcon } from '@heroicons/react/24/outline';
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Accordion,
-  AccordionItem,
-  Divider,
-  Button,
-} from '@nextui-org/react';
-import { Link } from '@remix-run/react';
+import type { ProjectCardProps } from '~/components/standalone/project-card';
+import ProjectCard from '~/components/standalone/project-card';
 
 export default function Portfolio() {
-  const projects = [
+  const projects: ProjectCardProps[] = [
     {
       repo: 'https://github.com/victor-likes-coding/asylum-rg-fe-starter',
       title: 'Asylum Report Generator',
@@ -54,49 +45,10 @@ export default function Portfolio() {
   return (
     <section className="Portfolio">
       <div className="grid gap-3 place-content-center mt-3">
-        {projects.map(
-          ({ contributions, description, repo, title, live }, ix) => (
-            // ! TODO: extract into own component
-            <Card
-              className="max-full bg-black text-[#fff]"
-              key={`${repo}-${ix}`}>
-              <CardHeader className="justify-center">
-                {title}
-                <Button
-                  isIconOnly={true}
-                  className="bg-transparent absolute top-1/99 right-px align-middle">
-                  <Link to={repo}>
-                    <LinkIcon color="white" className="w-4 h-4" />
-                  </Link>
-                </Button>
-              </CardHeader>
-              <Divider className="bg-[#fff]" />
-              <CardBody className="py-3">
-                {description}
-                <Accordion
-                  className="w-full mt-2"
-                  isCompact={true}
-                  itemClasses={{
-                    title: 'text-[#fff]',
-                  }}>
-                  <AccordionItem
-                    aria-label="contributions"
-                    title="Contributions">
-                    <ul className="list-disc list-inside">
-                      {contributions.map((contribution, index) => (
-                        <li
-                          className="mb-2 last:mb-0"
-                          key={`${contribution}-${index}`}>
-                          {contribution}
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionItem>
-                </Accordion>
-              </CardBody>
-            </Card>
-          ),
-        )}
+        {projects.map((project, index) => {
+          const { repo } = project;
+          return <ProjectCard {...project} key={`${repo}-${index}`} />;
+        })}
       </div>
     </section>
   );
