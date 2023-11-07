@@ -10,7 +10,7 @@ const Image = ({ className = '', alt = '', src = '' }: ImageProps) => {
       <img
         src={src}
         alt={alt}
-        className="w-full border border-blue-700 rounded-md"
+        className="w-full border border-blue-500 rounded-lg"
       />
     </div>
   );

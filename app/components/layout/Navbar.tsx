@@ -42,7 +42,7 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-black"
+      className="bg-slate-900 border-b-2 border-blue-500"
       isBordered={true}>
       <NavbarContent>
         {/* Only show toggle menu if we're not on root page of '/' */}
@@ -56,7 +56,7 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
           {linksMap[location.pathname as pathOptions]}
         </p>
       </NavbarContent>
-      <NavbarMenu className="p-0 gap-0 divide-y bg-black">
+      <NavbarMenu className="p-0 gap-0 divide-y bg-slate-900">
         {links.map(({ text, navigateTo }, index) => {
           // Don't show the current page in the navbar
           if (location.pathname === navigateTo) return '';

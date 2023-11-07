@@ -16,19 +16,19 @@ export default {
     },
     extend: {
       colors: {
-        black: '#001219',
-        blue: {
+        'cs-black': '#001219',
+        'cs-blue': {
           300: '#005F73',
           500: '#0A9396',
           700: '#94D2BD',
         },
-        white: '#E9D8A6',
-        yellow: '#EE9B00',
-        orange: {
+        'cs-white': '#E9D8A6',
+        'cs-yellow': '#EE9B00',
+        'cs-orange': {
           300: '#CA6702',
           500: '#BB3E03',
         },
-        red: {
+        'cs-red': {
           300: '#AE2012',
           700: '#9B2226',
         },

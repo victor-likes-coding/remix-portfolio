@@ -10,7 +10,10 @@ const Introduction = ({
   introText,
 }: IntroductionProps) => {
   return (
-    <section className={(className + 'divide-y my-2 text-center').trimStart()}>
+    <section
+      className={(
+        className + 'divide-y divide-blue-500 my-2 text-center'
+      ).trimStart()}>
       {children}
       {introText && <div className="font-bold pt-2">{introText}</div>}
     </section>
