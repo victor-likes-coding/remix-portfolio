@@ -13,6 +13,6 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-      <Main />
+      <Main className="h-auto"/>
   );
 }
