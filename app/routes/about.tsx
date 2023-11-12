@@ -24,7 +24,14 @@ export default function About() {
             years old aspiring software developer. I was born right here in the
             U.S. and have been coding mostly in JS for the better part of 6
             years (more or less). I recently picked up TypeScript a couple years
-            ago and have been loving it ever since.
+            ago and have been loving it ever since. I'm a gamer when I'm not
+            writing code.
+          </p>
+
+          <p>
+            I do enjoy a good binge of anime or some tv show. I really enjoy
+            Isekai animes. I don't really like social media except for TikTok
+            and it's mostly to consume social media not make content.
           </p>
 
           <p>
