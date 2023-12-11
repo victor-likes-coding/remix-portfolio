@@ -56,7 +56,7 @@ export default function About() {
             can be reached at.
           </p>
 
-          <Button navigateTo="/socials" text="Socials" />
+          <Button navigateTo="/contact" text="Socials" />
         </section>
       </section>
     </section>
