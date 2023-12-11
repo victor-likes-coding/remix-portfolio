@@ -39,7 +39,7 @@ export default function About() {
             <span className="text-blue-700 cursor-pointer font-bold">
               <Link to="/pet">Lucy</Link>
             </span>
-            , who is sweet furbaby and the reason I've dedicated myself to
+            , who is my sweet furbaby and the reason I've dedicated myself to
             wanting to get a job in SWE. It's to be able to get her a big house
             and a brother/sister companion. I've sort of been slacking trying to
             get a job in this field for a while now, but I'm fairly confident
