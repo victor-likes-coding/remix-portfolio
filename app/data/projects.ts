@@ -1,6 +1,20 @@
-import type { ProjectCardProps } from "~/components/standalone/project-card";
+import type { ProjectCardProps } from '~/components/standalone/project-card';
 
 export const projects: ProjectCardProps[] = [
+  {
+    repo: 'https://github.com/victor-likes-coding/asylum-rg-fe-starter',
+    title: 'Remix Portfolio',
+    description:
+      'A portfolio created with the remix library. Utilizes a backend for the frontend style of creating web apps',
+    contributions: [
+      'Write clean, high-quality code',
+      'Incorporates real life information',
+      'Added a bit of weebness',
+      'Showing off my dog',
+    ],
+    live: '',
+  },
+
   {
     repo: 'https://github.com/victor-likes-coding/asylum-rg-fe-starter',
     title: 'Asylum Report Generator',
