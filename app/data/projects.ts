@@ -2,7 +2,7 @@ import type { ProjectCardProps } from '~/components/standalone/project-card';
 
 export const projects: ProjectCardProps[] = [
   {
-    repo: 'https://github.com/victor-likes-coding/asylum-rg-fe-starter',
+    repo: 'https://github.com/victor-likes-coding/remix-portfolio',
     title: 'Remix Portfolio',
     description:
       'A portfolio created with the remix library. Utilizes a backend for the frontend style of creating web apps',
