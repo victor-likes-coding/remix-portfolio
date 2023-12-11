@@ -5,7 +5,7 @@ import { projects } from '~/data/projects';
 export default function Portfolio() {
   return (
     <section className="Portfolio max-h-full overflow-y-scroll">
-      <div className="grid gap-3 place-content-center mt-3">
+      <div className="grid gap-4 place-content-center mt-4 mb-4">
         {projects.map((project, index) => {
           const { repo } = project;
           return <ProjectCard {...project} key={`${repo}-${index}`} />;
