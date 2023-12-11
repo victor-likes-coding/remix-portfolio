@@ -12,7 +12,8 @@ const Introduction = ({
   return (
     <section
       className={(
-        className + 'divide-y divide-blue-500 my-2 text-center'
+        className +
+        'divide-y divide-blue-500 my-2 text-center md:w-1/2 md:mx-auto'
       ).trimStart()}>
       {children}
       {introText && <div className="font-bold pt-2">{introText}</div>}
