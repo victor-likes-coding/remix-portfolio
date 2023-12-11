@@ -12,9 +12,9 @@ const Main = ({ className = '' }: IMainProps) => {
     <div className={(className + ' Main').trimStart()}>
       <Image src={gif} alt="Gojo" />
       <Introduction introText="Frontend | Backend | Fullstack">
-        <header className="mb-2">
+        <header className="mb-2 md:w-1/2 md:mx-auto">
           <h1 className="font-bold flex flex-col">
-            <span className="line-through text-blue-500 text-xs">
+            <span className="line-through text-blue-500 text-xs md:hidden">
               Gojo Satoru
             </span>
             <span className="text-xl">Victor Tran</span>
