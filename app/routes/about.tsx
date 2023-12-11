@@ -7,13 +7,13 @@ export default function About() {
     <section className="About">
       <Introduction>
         <header className="font-bold text-center border-b pb-3">
-          <h2 className="text-xl">About Me</h2>
+          <h2 className="text-xl">Hey there 👋</h2>
         </header>
       </Introduction>
       <section className="about-life flex flex-col pb-2">
         <section className="gap-6 mt-3 flex flex-col text-center text-[15px]">
           <p>
-            Hey there 👋, I'm Victor! Nice to meet ya. I'm a{' '}
+            I'm Victor! Nice to meet ya. I'm a{' '}
             {
               // these are in ms so to get years we divide by 1000 to get seconds
               Math.floor(
