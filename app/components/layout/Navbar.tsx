@@ -10,13 +10,13 @@ import {
 import Burger from '../shared/burger';
 import { useLocation } from '@remix-run/react';
 
-interface INavbarProps {
+interface Props {
   className?: string;
 }
 
 type pathOptions = '/' | '/portfolio' | '/contact' | '/about' | '/pet';
 
-const CustomNavbar = ({ className = '' }: INavbarProps) => {
+const CustomNavbar = (props: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -44,7 +44,7 @@ const CustomNavbar = ({ className = '' }: INavbarProps) => {
       onMenuOpenChange={setIsMenuOpen}
       className="bg-slate-900 border-b-2 border-blue-500"
       isBordered={true}>
-      <NavbarContent>
+      <NavbarContent className="">
         {/* Only show toggle menu if we're not on root page of '/' */}
         {location.pathname !== '/' && (
           <NavbarMenuToggle
