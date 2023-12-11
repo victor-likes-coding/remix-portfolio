@@ -6,7 +6,7 @@ interface ImageProps {
 
 const Image = ({ className = '', alt = '', src = '' }: ImageProps) => {
   return (
-    <div className={(className + 'pt-3 Image').trimStart()}>
+    <div className={(className + 'pt-3 Image md:hidden').trimStart()}>
       <img
         src={src}
         alt={alt}
