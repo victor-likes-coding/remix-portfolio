@@ -25,7 +25,7 @@ function ProjectCard({
   contributions,
 }: ProjectCardProps) {
   return (
-    <Card className="max-full bg-slate-900 border border-blue-500  text-[#fff] rounded-none">
+    <Card className="w-full bg-slate-900 border border-blue-500  text-[#fff] rounded-none">
       <CardHeader className="justify-center">
         {title}
         <Button

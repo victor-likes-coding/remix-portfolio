@@ -4,8 +4,8 @@ import { projects } from '~/data/projects';
 
 export default function Portfolio() {
   return (
-    <section className="Portfolio max-h-full overflow-y-scroll">
-      <div className="grid gap-4 place-content-center mt-4 mb-4">
+    <section className="Portfolio min-h-without-navbar overflow-y-scroll">
+      <div className="flex flex-col items-center gap-4 mt-4 mb-4 px-4 w-screen">
         {projects.map((project, index) => {
           const { repo } = project;
           return <ProjectCard {...project} key={`${repo}-${index}`} />;

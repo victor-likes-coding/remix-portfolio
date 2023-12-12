@@ -7,11 +7,7 @@ interface ImageProps {
 const Image = ({ className = '', alt = '', src = '' }: ImageProps) => {
   return (
     <div className={(className + 'pt-3 Image md:hidden').trimStart()}>
-      <img
-        src={src}
-        alt={alt}
-        className="w-full border border-blue-500 rounded-lg"
-      />
+      <img src={src} alt={alt} className="border border-blue-500 rounded-lg" />
     </div>
   );
 };
