@@ -33,7 +33,10 @@ export default {
           700: '#9B2226',
         },
       },
-    }
+    },
+    height: {
+      'without-navbar': 'calc(100vh - 4rem)',
+    },
   },
   darkMode: 'class',
   plugins: [nextui()],

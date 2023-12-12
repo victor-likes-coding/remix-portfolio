@@ -9,7 +9,10 @@ interface IMainProps {
 
 const Main = ({ className = '' }: IMainProps) => {
   return (
-    <div className={(className + ' Main').trimStart()}>
+    <div
+      className={(
+        className + ' Main md:h-without-navbar w-screen'
+      ).trimStart()}>
       <Image src={gif} alt="Gojo" />
       <Introduction introText="Frontend | Backend | Fullstack">
         <header className="mb-2 md:w-1/2 md:mx-auto">

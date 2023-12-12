@@ -5,7 +5,8 @@ interface LinksProps {
 }
 
 const Links = ({ className = '' }: LinksProps) => (
-  <div className={`Links ${className} flex flex-col gap-4`.trim()}>
+  <div
+    className={`Links ${className} flex flex-col md:flex-row gap-4 md:gap-0 md:w-1/2 md:flex-wrap md:mx-auto`.trim()}>
     {[
       {
         text: 'Portfolio & Experience',

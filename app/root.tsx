@@ -26,10 +26,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="text-[#fff] bg-slate-950 h-auto w-screen">
+      <body className="text-[#fff] bg-slate-950 min-h-without-navbar h-auto w-screen">
         <NextUIProvider>
           <Navbar />
-          <div className="container px-3 min-h-screen h-auto min-w-full bg-transparent">
+          <div className="container px-3 h-auto bg-transparent">
             <Outlet />
           </div>
           <ScrollRestoration />
