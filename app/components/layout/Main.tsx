@@ -11,7 +11,7 @@ const Main = ({ className = '' }: IMainProps) => {
   return (
     <div
       className={(
-        className + ' Main md:h-without-navbar md:pt-40'
+        className + ' Main md:h-without-navbar md:pt-40 lg:pt-52'
       ).trimStart()}>
       <Image src={gif} alt="Gojo" hideable={true} />
       <Introduction
