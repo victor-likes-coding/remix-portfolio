@@ -3,6 +3,7 @@ interface ImageProps {
   alt?: string;
   src?: string;
   hideable?: boolean;
+  replaceCss: boolean;
 }
 
 const Image = ({
@@ -10,12 +11,17 @@ const Image = ({
   alt = '',
   src = '',
   hideable,
+  replaceCss,
 }: ImageProps) => {
   return (
     <div
-      className={(
-        className + `pt-3 Image ${hideable ? 'md:hidden' : ''}`
-      ).trimStart()}>
+      className={
+        replaceCss
+          ? className
+          : (
+              className + `pt-3 Image ${hideable ? 'md:hidden' : ''}`
+            ).trimStart()
+      }>
       <img src={src} alt={alt} className="border border-blue-500 rounded-lg" />
     </div>
   );
