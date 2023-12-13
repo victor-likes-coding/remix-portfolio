@@ -9,7 +9,7 @@ export default function Pet() {
         replaceCss={true}
         src={lucy}
         alt="Lucy my dog"
-        className="md:w-1/2 my-4 mx-auto"
+        className="md:w-1/2 my-4 mx-auto lg:w-1/3"
       />
       <Introduction>
         <header className="font-bold text-center border-b">
@@ -17,7 +17,7 @@ export default function Pet() {
           <p className="mb-2">My "why" on becoming an SWE</p>
         </header>
       </Introduction>
-      <section className="pet-life flex flex-col gap-2 pb-3 md:w-3/4 mx-auto text-center md:pb-6">
+      <section className="pet-life flex flex-col gap-2 pb-3 md:w-3/4 mx-auto text-center md:pb-6 lg:w-1/2">
         <section className="early-life gap-4 flex flex-col">
           <h3 className="font-bold text-center">Early Life</h3>
           <p>

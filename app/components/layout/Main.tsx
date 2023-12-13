@@ -14,7 +14,9 @@ const Main = ({ className = '' }: IMainProps) => {
         className + ' Main md:h-without-navbar md:pt-40'
       ).trimStart()}>
       <Image src={gif} alt="Gojo" hideable={true} />
-      <Introduction introText="Frontend | Backend | Fullstack">
+      <Introduction
+        introText="Frontend | Backend | Fullstack"
+        className="lg:w-3/4">
         <header className="mb-2 md:w-1/2 md:mx-auto">
           <h1 className="font-bold flex flex-col">
             <span className="line-through text-blue-500 text-xs md:hidden">

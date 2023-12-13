@@ -10,7 +10,7 @@ export default function About() {
           <h2 className="text-2xl">Hey there 👋</h2>
         </header>
       </Introduction>
-      <section className="about-life flex flex-col pb-2 md:w-3/4 md:mx-auto md:text-justify">
+      <section className="about-life flex flex-col pb-2 md:w-3/4 md:mx-auto md:text-justify lg:w-1/2">
         <section className="gap-6 mt-3 flex flex-col text-center text-md md:text-lg">
           <p>
             I'm Victor! Nice to meet ya. I'm a{' '}

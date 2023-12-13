@@ -5,7 +5,7 @@ import { projects } from '~/data/projects';
 export default function Portfolio() {
   return (
     <section className="Portfolio min-h-without-navbar overflow-y-scroll">
-      <div className="flex flex-col items-center gap-4 my-4 px-4 md:w-3/4 md:mx-auto md:gap-6 md:my-6">
+      <div className="flex flex-col items-center gap-4 my-4 px-4 md:w-3/4 md:mx-auto md:gap-6 md:my-6 lg:w-1/2">
         {projects.map((project, index) => {
           const { repo } = project;
           return <ProjectCard {...project} key={`${repo}-${index}`} />;
