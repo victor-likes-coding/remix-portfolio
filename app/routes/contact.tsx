@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons';
 export default function Portfolio() {
   return (
     <section className="Socials max-h-full overflow-y-scroll">
-      <div className="card-container mt-6 grid gap-6">
+      <div className="card-container mt-6 grid gap-6 md:w-3/4 mx-auto">
         <Card
           className="max-w-full bg-slate-900 border border-blue-500  text-[#fff] rounded relative overflow-visible"
           isBlurred>
