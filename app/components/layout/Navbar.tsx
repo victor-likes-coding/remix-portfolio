@@ -63,7 +63,7 @@ const CustomNavbar = (props: Props) => {
           return (
             <NavbarMenuItem key={navigateTo}>
               <Link
-                className="w-full bg-blue-500 p-4 text-[#fff]"
+                className="w-full bg-blue-500 p-4 text-[#fff md:flex md:justify-center"
                 href={navigateTo}
                 size="lg">
                 {text}
