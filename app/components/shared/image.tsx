@@ -3,7 +3,7 @@ interface ImageProps {
   alt?: string;
   src?: string;
   hideable?: boolean;
-  replaceCss: boolean;
+  replaceCss?: boolean;
 }
 
 const Image = ({

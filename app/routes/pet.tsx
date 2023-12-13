@@ -5,14 +5,19 @@ import Image from '~/components/shared/image';
 export default function Pet() {
   return (
     <section className="Pet">
-      <Image src={lucy} alt="Lucy my dog" />
+      <Image
+        replaceCss={true}
+        src={lucy}
+        alt="Lucy my dog"
+        className="md:w-1/2 md:my-4 mx-auto"
+      />
       <Introduction>
         <header className="font-bold text-center border-b">
           <h2 className="text-xl">Lucy</h2>
           <p className="mb-2">My "why" on becoming an SWE</p>
         </header>
       </Introduction>
-      <section className="pet-life flex flex-col gap-2 pb-3">
+      <section className="pet-life flex flex-col gap-2 pb-3 md:w-3/4 mx-auto md:text-center md:pb-6">
         <section className="early-life gap-4 flex flex-col">
           <h3 className="font-bold text-center">Early Life</h3>
           <p>
@@ -34,11 +39,11 @@ export default function Pet() {
           <h3 className="font-bold text-center">Mid Life</h3>
           <p>
             Lucy has been with me for {new Date().getFullYear() - 2019} years.
-            This year, 2023, I've been home nearly the whole year, and she's
-            definitely loving it as opposed to traveling around the bible belt
-            doing disaster relief clean up work. This might be the sign where I
-            go and get a remote job in the software engineering industry so that
-            I can be home with her.
+            In 2023, I've been home nearly the whole year, and she's definitely
+            loving it as opposed to traveling around the bible belt doing
+            disaster relief clean up work. This might be the sign where I go and
+            get a remote job in the software engineering industry so that I can
+            be home with her.
           </p>
 
           <p>
