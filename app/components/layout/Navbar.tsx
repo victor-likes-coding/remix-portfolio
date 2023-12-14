@@ -44,16 +44,37 @@ const CustomNavbar = (props: Props) => {
       onMenuOpenChange={setIsMenuOpen}
       className="bg-slate-900 border-b-2 border-blue-500"
       isBordered={true}>
-      <NavbarContent className="">
+      <NavbarContent>
         {/* Only show toggle menu if we're not on root page of '/' */}
         {location.pathname !== '/' && (
           <NavbarMenuToggle
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             icon={<Burger />}
+            className="lg:hidden"
           />
         )}
-        <p className="text-[#fff] font-bold text-center w-screen absolute right-0 -z-10 text-xl">
+        <p className="text-[#fff] font-bold text-center w-screen absolute right-0 -z-10 text-xl lg:text-start lg:pl-6 lg:flex lg:justify-between lg:items-center">
           {linksMap[location.pathname as pathOptions]}
+          <div className="xs:hidden lg:flex lg:max-h-16">
+            {links.map(({ text, navigateTo }, index) => {
+              // Don't show the current page in the navbar
+              if (location.pathname === navigateTo) return '';
+              const renderedText = text.split(' ').map((value, index) => (
+                <span key={value} className={index !== 0 ? 'lg:hidden' : ''}>
+                  {value}
+                </span>
+              ));
+              return (
+                <Link
+                  key={text}
+                  className="w-full p-4 text-[#fff md:flex md:justify-center lg:text-sm lg:px-6 lg:w-32"
+                  href={navigateTo}
+                  size="sm">
+                  {renderedText}
+                </Link>
+              );
+            })}
+          </div>
         </p>
       </NavbarContent>
       <NavbarMenu className="p-0 gap-0 divide-y bg-slate-900">
